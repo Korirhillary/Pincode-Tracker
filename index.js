@@ -38,3 +38,27 @@ function displayStatus(status) {
     const messageContainer = document.getElementById("message-container");
     messageContainer.textContent = message;
   }
+  // Function to display "PostOffice" field
+  function displayPostOfficeDetails(postOfficeDetails) {
+    const postOfficeContainer = document.getElementById("postoffice-container");
+    postOfficeContainer.innerHTML = "";
+  
+    if (postOfficeDetails.length > 0) {
+      postOfficeDetails.forEach(office => {
+        const officeDetailsDiv = document.createElement("div");
+        officeDetailsDiv.className = "office-details";
+  
+        for (const key in office) {
+          if (office.hasOwnProperty(key)) {
+            const detail = document.createElement("p");
+            detail.textContent = `${key}: ${office[key]}`;
+            officeDetailsDiv.appendChild(detail);
+          }
+        }
+  
+        postOfficeContainer.appendChild(officeDetailsDiv);
+      });
+    } else {
+      displayError("No post office data found.");
+    }
+  }
