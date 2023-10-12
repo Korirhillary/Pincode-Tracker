@@ -74,3 +74,11 @@ function displayStatus(status) {
     document.getElementById("postoffice-container").innerHTML = "";
     document.getElementById("error-container").textContent = "";
   }
+   // Event listener for the "Search by PIN Code" button
+   document.getElementById("pincode-button").addEventListener("click", function () {
+    const pincode = document.getElementById("pincode").value;
+    if (pincode) {
+      clearResultContainers(); // Clear the result containers
+      getPostOfficeDetailsByPINCode(pincode);
+    }
+  });
