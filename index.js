@@ -67,3 +67,10 @@ function displayStatus(status) {
     const errorContainer = document.getElementById("error-container");
     errorContainer.textContent = message;
   }
+  // Function to clear the result containers
+  function clearResultContainers() {
+    document.getElementById("status-container").textContent = "";
+    document.getElementById("message-container").textContent = "";
+    document.getElementById("postoffice-container").innerHTML = "";
+    document.getElementById("error-container").textContent = "";
+  }
