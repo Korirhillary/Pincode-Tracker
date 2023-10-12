@@ -62,3 +62,8 @@ function displayStatus(status) {
       displayError("No post office data found.");
     }
   }
+   // Function to display error messages
+   function displayError(message) {
+    const errorContainer = document.getElementById("error-container");
+    errorContainer.textContent = message;
+  }
