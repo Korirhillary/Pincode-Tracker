@@ -17,6 +17,8 @@ function getPostOfficeDetailsByPINCode(pincode) {
           displayPostOfficeDetails(postOfficeDetails);
         }
       })
-
+      .catch(error => {
+        displayError("Error: " + error);
+      });
   }
   
