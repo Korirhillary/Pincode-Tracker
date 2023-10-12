@@ -22,3 +22,8 @@ function getPostOfficeDetailsByPINCode(pincode) {
       });
   }
   
+  // Function to display "Invalid"
+  function displayInvalid() {
+    const statusContainer = document.getElementById("status-container");
+    statusContainer.textContent = "Status: Invalid";
+  }
