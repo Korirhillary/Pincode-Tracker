@@ -32,3 +32,9 @@ function displayStatus(status) {
     const statusContainer = document.getElementById("status-container");
     statusContainer.textContent = "Status: " + status;
   }
+
+  // Function to display "Message" field
+  function displayMessage(message) {
+    const messageContainer = document.getElementById("message-container");
+    messageContainer.textContent = message;
+  }
