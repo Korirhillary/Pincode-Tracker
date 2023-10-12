@@ -27,3 +27,8 @@ function getPostOfficeDetailsByPINCode(pincode) {
     const statusContainer = document.getElementById("status-container");
     statusContainer.textContent = "Status: Invalid";
   }
+// Function to display "Status" field
+function displayStatus(status) {
+    const statusContainer = document.getElementById("status-container");
+    statusContainer.textContent = "Status: " + status;
+  }
