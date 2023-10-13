@@ -82,3 +82,10 @@ function displayStatus(status) {
       getPostOfficeDetailsByPINCode(pincode);
     }
   });
+  // Event listener for the "Reset" button
+  document.getElementById("Reset-button").addEventListener("click", function () {
+  // Clear the input field
+  document.getElementById("pincode").value = "";
+  // Clear the result containers
+  clearResultContainers();
+});
